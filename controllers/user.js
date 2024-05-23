@@ -1,5 +1,5 @@
+const Cart = require("../modals/cart");
 const User = require("../modals/user");
-
 module.exports.renderSignupForm = async (req,res,next)=>{
     res.render("authentication/signup.ejs");
 }
