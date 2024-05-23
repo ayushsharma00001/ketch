@@ -1,0 +1,45 @@
+<% layout("/layout/boilerplate.ejs") %>
+<body>
+    <div class="profile-main">
+        <% if(currUser){%>
+            <a href="<%=currUser.profile%>" target="_blank">
+                <img src="<%=currUser.profile%>" alt="myProfile" class="myProfileImg">
+            </a>
+
+        <%}else{%>
+            <img src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-social-600nw-1677509740.jpg" alt="myProfile" class="myProfileImg">
+        <%}%>
+        
+        <h2>
+            <% if(currUser){%>
+                <%=currUser.username%>
+            <%}else{%>
+                User
+            <%}%>
+        </h2>
+        <div class="login-signup">
+            <% if(!currUser){%>
+                <a href="/signup" class="btn signUpBtn">Sign up</a>
+                <a href="/login" class="btn signInBtn">Login</a>
+            <%}%>
+            <% if(currUser){%>
+                <a href="/logout" class="btn logoutbtn">Log out</a>
+            <%}%>
+            
+        </div>
+        <div class="profile-options">
+            <a href="/myOrders">Orders</a>
+            <% if(currUser){%>
+                <a href="/address/<%=currUser._id%>">Address</a>
+                <a href="/cart/<%=currUser._id%>/<%=currUser.cart%>">Cart</a>
+                <a href="/profile/<%=currUser._id%>">Edit profile</a>    
+            <%}%>
+            <% if(currUser && currUser.access == "admin"){%>
+                <a href="/dashboard">Dashboard</a>    
+                <a href="/addProduct">Add Product</a>    
+            <%}%>
+            <a href="mailto:ayushkhandal6126@gmail.com" id="profile-contactUs">Contact us</a>    
+        </div>
+    </div>
+
+</body>

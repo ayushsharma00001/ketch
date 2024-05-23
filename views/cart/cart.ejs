@@ -1,0 +1,22 @@
+<% layout("/layout/boilerplate")%>
+
+<% if(cart.product.length>0){%>
+    <div class="outerCartDiv">
+        <% for(let product of cart.product){%>
+            <div class="innerProductCartDiv">
+                <a href="/products/<%=product.productId._id%>"><img src="<%=product.productId.img[0]%>" alt="productImg" class="cartProductImg"></a>
+                <div class="cartProductParams">
+                    <h2><%=product.productId.name%></h2>
+                    <h3> &#8377;<%=product.productId.price.toLocaleString("en-IN")%></h3>
+                    <p><b>Size:</b><%=product.size%></p>
+                    <p><b>quantity:</b><%=product.quantity%></p>
+                    <form action="/cart/<%=cart._id%>/<%=product.productId._id%>?_method=PUT" method="POST">
+                        <button class="non-btn"><i class="fa-solid fa-xmark"></i></button>
+                    </form>                
+                </div>
+            </div>
+        <%}%>
+    </div>
+<%}else{%>
+    <h3  class="explore-products"><a href="/products">Explore products</a></h3>
+<%}%>

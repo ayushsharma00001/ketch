@@ -1,0 +1,36 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+  <body>
+    <main>
+      <div class="main">
+        <h1>Bring it with Ketch</h1>
+        <img id="img1"
+          src="https://images.unsplash.com/photo-1545194828-a1cf868f1b2b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" />
+        <img id="img2"
+          src="https://images.unsplash.com/photo-1600456553195-3037512efcd6?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" />
+        <img id="img3"
+          src="https://images.unsplash.com/photo-1536129808005-fae894214c73?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="" />
+        <img id="img4"
+          src="https://images.unsplash.com/photo-1511280303142-0051e93baeeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTUyfHxmYXNoaW9uJTIwbW9kZWxzfGVufDB8fDB8fHww"
+          alt="" />
+        <div class="taglines">
+          <h4 class="tag-line">Let we decide your look</h4>
+          <h4 class="tag-line">सर्वे मेक इन इंडिया उत्पादाः</h4>
+        </div>
+      </div>
+      <div class="mid-page-dataOuter">
+          <% for (let d of data) { %>
+            <div class="mid-page-dataInner">
+              <a href="/products/<%=d._id%>">
+                <img src="<%=d.img[0]%>" alt="img" class="home-page-showImages" />
+              </a>
+            </div>
+            <% } %>
+
+      </div>
+
+    </main>
+  </body>

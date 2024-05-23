@@ -1,0 +1,39 @@
+.addressOuterFormDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.addressOuterFormDiv > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.address-input{
+    padding: 0.5rem;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 0.4rem;
+    width: 50%;
+    
+
+}
+
+.setAddress-btn{
+    border: 1px solid #ccc;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.setAddress{
+    text-decoration: none;
+    text-transform: uppercase;
+}

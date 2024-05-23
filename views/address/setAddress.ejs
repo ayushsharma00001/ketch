@@ -1,0 +1,13 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<body>
+    <div class="addressOuterFormDiv">
+        <form action="/setAddress/<%=currUser._id%>" method="POST">
+            <input type="text" name="address[street]" id="" placeholder="Enter street" required class="address-input">
+            <input type="text" name="address[city]" id="" placeholder="Enter city" required class="address-input">
+            <input type="text" name="address[state]" id="" placeholder="Enter state" required class="address-input">
+            <input type="number" name="address[contact]" id="" placeholder="Enter Mobile Number" maxlength="10" minlength="10" required class="address-input">
+            <button class="btn setAddress-btn">Set address</button>
+        </form>
+    </div>
+</body>

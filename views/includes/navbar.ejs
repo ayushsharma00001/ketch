@@ -1,0 +1,41 @@
+<header>
+    <nav id="navbar">
+        <div class="nav-left">
+            <h2 id="logo"><a href="/">Ketch</a></h2>
+        </div>
+        <div class="nav-mid">
+            <ul class="nav-uol">
+                <div class="parentUnd">
+                    <li class="nav-uol-li"><a href="/">Home</a></li>
+                    <div class="underline"></div>
+                </div>
+                <div class="parentUnd">
+                    <li class="nav-uol-li"><a href="/categories">Categories</a></li>
+                    <div class="underline"></div>
+                </div>
+                <div class="parentUnd">
+                    <li class="nav-uol-li"><a href="/products">Products</a></li>
+                    <div class="underline"></div>
+                </div>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="nav-right-search">
+                <a href="/search"><span class="material-symbols-outlined">search</span></a>
+            </div>
+            <% if(currUser){%>
+                <div class="nav-right-cart">
+                    <a href="/cart/<%=currUser._id%>/<%=currUser.cart%>"><span class="material-symbols-outlined">shopping_cart_checkout</span> </a>                     
+                </div>
+            <%}%>
+            <div class="nav-right-profile">
+                <% if(currUser){%>
+                    <a href="/profile"><img src="<%=currUser.profile%>" alt="profile" class="profile-logo"></a>         
+                <%}else{%>
+                    <a href="/profile"><span class="material-symbols-outlined">account_circle</span>  </a>      
+                <%}%>
+            </div>
+            
+        </div>
+    </nav>
+</header>

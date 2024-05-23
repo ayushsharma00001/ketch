@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: rgba(132, 109, 100, 0.482); */
+  padding: 0.8rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.575);
+}
+#logo a {
+  text-decoration: none;
+  color: #E5AE65;
+  letter-spacing: 0.1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-mid .nav-uol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-mid .nav-uol .nav-uol-li {
+  list-style: none;
+}
+.nav-mid .nav-uol .nav-uol-li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 500;
+
+}
+.underline{
+  height: 1px;
+  width: 0;
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-logo{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* flashes */
+.flash-outer{
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10000;
+  cursor: pointer;
+}
+.inner-div-error{
+  padding: 0.3rem 1.5rem;
+  background-color: rgba(255, 0, 0, 0.769);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+}
+.inner-div-success{
+  padding: 0.3rem 1.5rem;
+  background-color: rgba(0, 128, 0, 0.844);
+  border-radius: 10px;
+  display: flex;
+  width: 15vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.close{
+  cursor: pointer;
+  margin-left: 0.5rem;
+}

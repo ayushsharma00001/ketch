@@ -1,0 +1,9 @@
+<% layout("/layout/boilerplate.ejs")%>
+    <div class="productsDivOuter">
+        <%for(let d of data){%>
+            <div class="productsDivInner">
+                <a href="/products/<%=d._id%>"><img src="<%=d.img[0]%>" alt="product"></a>
+            </div>
+        <%}%>
+        
+    </div>

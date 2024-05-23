@@ -1,0 +1,16 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<div class="addProductOuter-editProduct">
+    <div class="editProductDiv">
+        <form action="/products/<%=product._id%>/edit?_method=PUT" method="POST" class="form edit-product-form">
+            <h2>Edit Product</h2>
+            <input type="text" name="product[name]" id="" placeholder="Enter name" value="<%=product.name%>" required>
+            <input type="text" name="product[description]" id="" placeholder="Enter Description" value="<%=product.description%>" required>
+            <input type="number" name="product[s]" id="" placeholder="Enter quantity in small" value="<%=product.s%>" required>
+            <input type="number" name="product[m]" id="" placeholder="Enter quantity in medium" value="<%=product.m%>" required>
+            <input type="number" name="product[l]" id="" placeholder="Enter quantity in large" value="<%=product.l%>" required>
+            <input type="number" name="product[price]" id="" placeholder="Enter Price" min="10" value="<%=product.price%>" required>
+            <button class="btn add-btn">Save changes</button>
+        </form>
+    </div>
+</div>

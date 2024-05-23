@@ -1,0 +1,30 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<div class="addProductOuter">
+    <div class="addProductDiv">
+        <form action="/addProduct" method="POST" enctype="multipart/form-data" class="form edit-profile-form">
+            <h2>Add new Product</h2>
+            <input type="text" name="product[name]" id="" placeholder="Enter name" required>
+            <input type="text" name="product[description]" id="" placeholder="Enter Description" required>
+            <input type="number" name="product[s]" id="" placeholder="Enter quantity in small" required>
+            <input type="number" name="product[m]" id="" placeholder="Enter quantity in medium" required>
+            <input type="number" name="product[l]" id="" placeholder="Enter quantity in large" required>
+            <input type="number" name="product[price]" id="" placeholder="Enter Price" min="10" required>
+            <div class="labels">
+                <label for="inputTag" class="img-label">
+                    Select Image 1
+                    <input id="inputTag" type="file" name="img1" required>
+                </label>
+                <label for="inputTag" class="img-label">
+                    Select Image 2
+                    <input id="inputTag" type="file" name="img2" required>
+                </label>
+                <label for="inputTag" class="img-label">
+                    Select Image 3
+                    <input id="inputTag" type="file" name="img3" required>
+                </label>
+            </div>
+            <button class="btn add-btn">Add product</button>
+        </form>
+    </div>
+</div>

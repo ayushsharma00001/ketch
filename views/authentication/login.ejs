@@ -1,0 +1,12 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<div class="authentication-form">
+    <form action="/login" method="post" class="form login-form">
+        <h2>Sign up</h2>
+        <input type="text" placeholder="Enter Username" required name="username" required>
+        <input type="password" name="password" id="pass" placeholder="Enter password" required>
+        <a href="/forgetPass" class="auth-anchors">Forgot password?</a>
+        <a href="/signup" class="auth-anchors">Create an account!</a>
+        <button class="btn disable-btn">Log in</button>
+    </form>
+</div>

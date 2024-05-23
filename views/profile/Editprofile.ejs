@@ -1,0 +1,16 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<div class="editProfileDiv">
+    <form action="/profile/<%=user._id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="form edit-profile-form">
+        <h2>Update Profile</h2>
+        <input type="text" name="username" id="" value="<%=user.username%>" readonly>
+        <input type="text" name="email" id="" value="<%=user.email%>" readonly>
+        <input type="number" name="age" id="" value="<%=user.age%>" placeholder="Enter age">
+        <input type="text" name="gender" id="" value="<%=user.gender%>" placeholder="Enter gender">
+        <label for="inputTag">
+            Select Image
+            <input id="inputTag" type="file"/ name="profile">
+          </label>
+        <button class="btn disable-btn">Save changes</button>
+    </form>
+</div>

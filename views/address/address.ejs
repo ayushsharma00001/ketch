@@ -1,0 +1,21 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+    <body>
+        <div class="addressOuterFormDiv">
+            <%if(user.address){%>
+                <form action="/editAddress/<%=user._id%>?_method=PUT" method="POST">
+                    <input type="text" name="address[street]" id="" value="<%=user.address.street%>"
+                        placeholder="Enter street" class="address-input" required>
+                    <input type="text" name="address[city]" id="" value="<%=user.address.city%>" placeholder="Enter city"
+                        class="address-input" required>
+                    <input type="text" name="address[state]" id="" value="<%=user.address.state%>" placeholder="Enter state"
+                        class="address-input" required>
+                    <input type="number" name="address[contact]" id="" value="<%=user.address.contact%>"
+                        placeholder="Enter Contact number" class="address-input" required>
+                    <button class="btn setAddress-btn">Edit address</button>
+                </form>
+                <%}else{%>
+                    <h3><a href="/setAddress" class="setAddress">Set Address</a></h3>
+                <%}%>
+        </div>
+    </body>

@@ -1,0 +1,10 @@
+<%if(error && error.length>0){%>
+    <div class="outer-div flash-outer">
+        <div class="inner-div-error"><%=error%> <div><i class="fa-solid fa-xmark"></i></div></div>
+    </div>
+<%}%>
+<%if(success && success.length>0){%>
+    <div class="outer-div flash-outer">
+        <div class="inner-div-success"><%=success%> <div><i class="fa-solid fa-xmark"></i></div></div>
+    </div>
+<%}%>
